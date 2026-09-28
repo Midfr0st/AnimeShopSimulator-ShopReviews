@@ -1,4 +1,4 @@
-# Отзывы о магазине — Anime Shop Simulator
+# Отзывы о магазине — мод для Anime Shop Simulator
 
 ![Anime Shop Simulator](https://img.shields.io/badge/Anime%20Shop%20Simulator-1.0.6-f6a800)
 ![Version](https://img.shields.io/badge/version-0.4.4-1685d1)
@@ -6,7 +6,7 @@
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3-7952b3)
 ![License](https://img.shields.io/badge/license-MIT-2ea44f)
 
-**Отзывы о магазине** добавляют рейтинг и редкие отзывы покупателей, составленные по событиям их визита.
+**Отзывы о магазине** — мод для **Anime Shop Simulator** на базе **MelonLoader** и **WolfCore**. Он добавляет рейтинг и редкие отзывы покупателей, составленные по событиям их визита.
 
 Лишь часть клиентов публикует отзыв. Удачный визит обычно проходит без комментария, а серьёзные проблемы повышают вероятность негативной оценки.
 
