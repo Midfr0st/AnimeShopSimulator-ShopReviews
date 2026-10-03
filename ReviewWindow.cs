@@ -12,8 +12,8 @@ internal static class ReviewWindow
     private const string RootName = "WolfMod_ShopReviewsSection";
     private const int VisibleReviewCount = 4;
 
-    private static readonly Color PageColor = new(0.955f, 0.958f, 0.985f, 1f);
-    private static readonly Color Navy = new(0.16f, 0.18f, 0.34f, 1f);
+    private static readonly Color PageColor = new(0.955f, 0.950f, 0.995f, 0.94f);
+    private static readonly Color Navy = new(0.27f, 0.25f, 0.68f, 1f);
     private static readonly Color Muted = new(0.38f, 0.40f, 0.52f, 1f);
     private static readonly Color Gold = new(1.00f, 0.68f, 0.08f, 1f);
     private static readonly Color EmptyStar = new(0.73f, 0.74f, 0.79f, 1f);
@@ -41,7 +41,8 @@ internal static class ReviewWindow
 
         ReleaseTemplates();
         _view = view;
-        GameObject? textSource = view._levelText?.gameObject;
+        GameObject? textSource = view._employeeButton?.GetComponentInChildren<TextMeshProUGUI>(true)?.gameObject
+                                 ?? view._moneyText?.gameObject;
         GameObject? buttonSource = null;
         GameObject? panelSource = null;
 
@@ -171,13 +172,13 @@ internal static class ReviewWindow
         var shopName = GameStateReader.GetShopName();
 
         CreateText(_root.transform, "Title", "ОТЗЫВЫ ПОКУПАТЕЛЕЙ",
-            new Vector2(0.03f, 0.825f), new Vector2(0.60f, 0.89f), 42f,
+            new Vector2(0.22f, 0.825f), new Vector2(0.64f, 0.89f), 36f,
             FontStyles.Bold, TextAlignmentOptions.MidlineLeft, Navy);
         CreateText(_root.transform, "Subtitle",
             string.IsNullOrWhiteSpace(shopName)
                 ? $"Опубликовано отзывов: {totalRatings}"
                 : $"Магазин «{shopName}» • опубликовано отзывов: {totalRatings}",
-            new Vector2(0.03f, 0.780f), new Vector2(0.64f, 0.825f), 25f,
+            new Vector2(0.22f, 0.780f), new Vector2(0.64f, 0.825f), 22f,
             FontStyles.Normal, TextAlignmentOptions.MidlineLeft, Muted);
 
         var ratingPanel = CreatePanel(_root.transform, "RatingSummary", RatingPanel);
@@ -467,6 +468,11 @@ internal static class ReviewWindow
         clone.name = name;
         clone.hideFlags = HideFlags.DontSave;
         clone.SetActive(false);
+        foreach (var behaviour in clone.GetComponentsInChildren<MonoBehaviour>(true))
+        {
+            if (behaviour.GetIl2CppType().Name == "Localize")
+                behaviour.enabled = false;
+        }
         return clone;
     }
 

@@ -5,7 +5,7 @@ using Il2CppProject.Code.Gameplay.UI.Menu;
 using MelonLoader;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(WolfShopReviews.WolfShopReviewsMod), "Anime Shop: Shop Reviews", "0.4.4", "WolfMods")]
+[assembly: MelonInfo(typeof(WolfShopReviews.WolfShopReviewsMod), "Anime Shop: Shop Reviews", "0.4.5", "WolfMods")]
 
 namespace WolfShopReviews;
 
@@ -101,7 +101,7 @@ public sealed class WolfShopReviewsMod : MelonMod
         if (!WolfModBridge.TryRegister(
                 WolfModId,
                 "Отзывы о магазине",
-                "0.4.4",
+                "0.4.5",
                 "Редкие отзывы покупателей на основе реальных событий их визита.",
                 SetFeatureEnabled,
                 DrawWolfModSettings,
@@ -132,7 +132,7 @@ public sealed class WolfShopReviewsMod : MelonMod
             ReviewPatches.Install();
             _runtimeInitialized = true;
             LoggerInstance.Msg(
-                "Shop Reviews 0.4.4 загружен. Терминальная вкладка и игровой HUD подключены.");
+                "Shop Reviews 0.4.5 загружен. Терминальная вкладка и игровой HUD подключены.");
         }
         catch
         {
