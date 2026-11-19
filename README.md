@@ -1,6 +1,6 @@
 # Отзывы о магазине — мод для Anime Shop Simulator
 
-![Anime Shop Simulator](https://img.shields.io/badge/Anime%20Shop%20Simulator-1.0.74-f6a800)
+![Anime Shop Simulator](https://img.shields.io/badge/Anime%20Shop%20Simulator-1.1.1-f6a800)
 ![Version](https://img.shields.io/badge/version-0.4.5-1685d1)
 ![WolfCore](https://img.shields.io/badge/requires-WolfCore-1685d1)
 ![MelonLoader](https://img.shields.io/badge/MelonLoader-0.7.3-7952b3)
@@ -63,7 +63,7 @@ Anime Shop Simulator\UserData\WolfShopReviews.settings.json
 
 ## Совместимость
 
-- Anime Shop Simulator `1.0.74`;
+- Anime Shop Simulator `1.1.1`;
 - MelonLoader `0.7.3`;
 - WolfCore `0.2.6`;
 - Windows x64, Unity IL2CPP.
@@ -75,6 +75,12 @@ Anime Shop Simulator\UserData\WolfShopReviews.settings.json
 Если установлены фильтры полок, обновите их до [0.10.5](https://github.com/Midfr0st/AnimeShopSimulator-ShelfFilters/releases/tag/v0.10.5): исправлены бездействие выкладчиков и сброс пустых коробок возле мусорки.
 
 Подробнее: [результаты и границы проверки всех пяти компонентов](https://github.com/Midfr0st/AnimeShopSimulator-WolfCore/blob/main/docs/COMPATIBILITY-1.0.74.ru.md).
+
+## Проверка на игре 1.1.1 — 19 ноября 2026
+
+Версия **0.4.5** совместима с 1.1.1 по выполненным проверкам. Код, номер версии и файлы выпуска не менялись; заново скачивать уже установленную DLL не требуется. Проверены сборка на библиотеках 1.1.1, загрузка 14 обработчиков событий и создание нового отзыва в игровом запуске.
+
+Если используете фильтры полок, обновите их до [0.10.6](https://github.com/Midfr0st/AnimeShopSimulator-ShelfFilters/releases/tag/v0.10.6). Подробнее: [результаты и границы проверки всех пяти компонентов](https://github.com/Midfr0st/AnimeShopSimulator-WolfCore/blob/main/docs/COMPATIBILITY-1.1.1.ru.md).
 
 ## Если что-то не работает
 
